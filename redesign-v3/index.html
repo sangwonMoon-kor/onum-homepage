@@ -5,43 +5,53 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>ONUM Music Education</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <style>
-        body { font-family: 'Noto Sans KR', sans-serif; }
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-        .material-symbols-outlined.fill { font-variation-settings: 'FILL' 1; }
-    </style>
+    body { font-family: 'Noto Sans KR', sans-serif; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    .material-symbols-outlined.fill { font-variation-settings: 'FILL' 1; }
+</style>
 <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#22c55e",
-                        "primary-container": "#22c55e",
-                        "on-primary": "#ffffff",
-                        "surface-container-lowest": "#ffffff",
-                        "surface-container-low": "#f3f4f5",
-                        "outline-variant": "#e5e7eb",
-                        "on-surface": "#111827",
-                        "secondary": "#4b5563"
-                    },
-                    spacing: {
-                        "margin-desktop": "64px",
-                        "margin-mobile": "20px",
-                        "stack-xl": "80px",
-                        "stack-md": "24px",
-                        "container-max": "1280px"
-                    }
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "primary": "#22c55e",
+                    "primary-container": "#16a34a",
+                    "on-primary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-low": "#f3f4f5",
+                    "outline-variant": "#e5e7eb",
+                    "on-surface": "#111827",
+                    "secondary": "#4b5563"
+                },
+                spacing: {
+                    "margin-desktop": "64px",
+                    "margin-mobile": "20px",
+                    "stack-xl": "80px",
+                    "stack-md": "24px",
+                    "container-max": "1280px",
+                    "xs": "8px",
+                    "sm": "12px",
+                    "md": "16px",
+                    "lg": "24px",
+                    "xl": "32px",
+                    "2xl": "64px"
+                },
+                boxShadow: {
+                    "level-1": "0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03)",
+                    "level-2": "0 10px 15px -3px rgba(0,0,0,0.08), 0 4px 6px -2px rgba(0,0,0,0.04)"
                 }
             }
         }
-    </script>
+    }
+</script>
 </head>
 <body class="bg-surface-container-lowest text-on-surface">
-<!-- TopNavBar -->
+
+<!-- TopNavBar (v3) -->
 <nav class="bg-surface-container-lowest border-b border-outline-variant sticky top-0 z-50">
 <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
 <div class="text-2xl font-bold text-on-surface">ONUM</div>
@@ -54,7 +64,8 @@
 <button class="bg-primary hover:bg-green-600 text-on-primary px-6 py-2 rounded-lg font-semibold transition-colors duration-200">Get Started</button>
 </div>
 </nav>
-<!-- Hero Section -->
+
+<!-- Hero Section (v3) -->
 <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-xl">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 <div>
@@ -67,23 +78,21 @@
 </div>
 </div>
 </section>
-<!-- Features Section -->
+
+<!-- Features Section (v3) -->
 <section class="bg-surface-container-low py-stack-xl">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<!-- Feature 1 -->
 <div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant hover:border-primary transition-colors duration-300">
 <span class="material-symbols-outlined text-primary text-4xl mb-4">school</span>
 <h3 class="text-2xl font-bold mb-3">교육 자격증</h3>
 <p class="text-secondary leading-relaxed">공신력 있는 인증 기관에서 발급하는 지도사 자격증으로 전문성을 증명하세요. 체계적인 온라인 과정으로 빠르게 취득할 수 있습니다.</p>
 </div>
-<!-- Feature 2 -->
 <div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant hover:border-primary transition-colors duration-300">
 <span class="material-symbols-outlined text-primary text-4xl mb-4">business_center</span>
 <h3 class="text-2xl font-bold mb-3">학교 패키지</h3>
 <p class="text-secondary leading-relaxed">전국 초, 중학교 방과후 교실과 음악 수업에 최적화된 맞춤형 교육 패키지를 제공합니다. 악기부터 교재까지 한 번에 준비하세요.</p>
 </div>
-<!-- Feature 3 -->
 <div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant hover:border-primary transition-colors duration-300">
 <span class="material-symbols-outlined text-primary text-4xl mb-4">storefront</span>
 <h3 class="text-2xl font-bold mb-3">온음 악기샵</h3>
@@ -92,7 +101,8 @@
 </div>
 </div>
 </section>
-<!-- Stats Section -->
+
+<!-- Stats Section (v3) -->
 <section class="bg-primary py-16">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-on-primary">
@@ -111,73 +121,117 @@
 </div>
 </div>
 </section>
-<!-- Courses Section -->
-<section class="py-stack-xl max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+
+<!-- Courses Section (v4 UI + v3 colors) -->
+<section class="py-2xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 <div class="flex justify-between items-end mb-10">
-<h2 class="text-4xl font-bold text-on-surface">추천 코스</h2>
-<a class="text-primary font-semibold hover:underline flex items-center" href="#">전체 보기 <span class="material-symbols-outlined ml-1 text-sm">arrow_forward</span></a>
+<h2 class="text-3xl font-bold text-on-surface">추천 코스</h2>
+<a class="text-primary font-semibold hover:underline flex items-center text-sm" href="#">전체 보기 <span class="material-symbols-outlined ml-1 text-base">arrow_forward</span></a>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
 <!-- Course 1 -->
-<div class="group cursor-pointer">
-<div class="relative overflow-hidden rounded-xl aspect-[16/9] mb-4">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 border border-outline-variant" data-alt="A clean, modern online course video thumbnail featuring a bright classroom environment, a play button overlay, and a high-quality tin whistle resting on sheet music. Professional lighting, crisp focus, vibrant green UI accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8guoA0yzcMgkATDM7VZjS9_YtSlygYyPLzdOXXfqjp93IjO6sMto_6eK68k7yul_Q-tHNYHPK5q9rs_03hXla5On_nEnhC1pzNG-fcFfhYCqjfBAWSHhs2v0Ol-QDGtXAlLxgMFxYZqnMDA8PMXSEGhzE1WmerxRoE4MEYFEaCEReIfIpyPMzJbHFNsTuLzNVElp8exLHsXXv35Dut6QrQIdHaJDmPqadL4-GO8DoyczcxuWp_cpgtEDT8SrDk0xa4a6rBsI7zfw"/>
-<div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-<span class="material-symbols-outlined text-white text-6xl fill">play_circle</span>
+<div class="bg-surface-container-lowest rounded-2xl shadow-level-1 overflow-hidden border border-outline-variant hover:shadow-level-2 transition-all group">
+<div class="h-48 w-full bg-surface-container-low relative overflow-hidden">
+<img alt="틴휘슬 기초" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA213TrHjaYv52YEf3ZyNtQj9erX_wGrvVoJWiechha7Hx7l99X_Bf2wfYHfGO5vtCWerRRfcEX62LrpPm322ASJUfTg7U0wG2n5TBhaK36jq2Ys18krkqfKXJtmwH8K_Glfncs5EHnkNVp2LzvzshAaYL7KczM6Uuj8YHumnycBLx9spyCE9eA33jYY4g-EiAwOKTTDREp7AccMyfgZ21iauIBpiQQgnMF6e1eDHPaHZFplhu8h_m4_6T00U9uQxdl1_vXvJeHCnE"/>
+<div class="absolute top-4 left-4 bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-bold">입문</div>
+</div>
+<div class="p-lg">
+<h3 class="text-xl font-bold mb-2">틴휘슬 기초 마스터</h3>
+<p class="text-sm text-secondary leading-relaxed mb-md">악기 잡는 법부터 쉬운 동요 연주까지, 첫 걸음을 위한 완벽한 가이드</p>
+<div class="flex justify-between items-center pt-md border-t border-outline-variant">
+<span class="text-primary font-bold text-lg">₩49,000</span>
+<button class="text-primary hover:text-green-600 text-sm font-semibold flex items-center gap-1">수강하기 <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
 </div>
 </div>
-<div class="flex items-center gap-2 mb-2">
-<span class="bg-green-100 text-primary text-xs font-bold px-2 py-1 rounded">초급</span>
-<span class="text-sm text-secondary">총 12강</span>
-</div>
-<h3 class="text-xl font-bold mb-1 group-hover:text-primary transition-colors">기초 틴휘슬 마스터</h3>
-<p class="text-secondary font-medium">강사: 김온음</p>
 </div>
 <!-- Course 2 -->
-<div class="group cursor-pointer">
-<div class="relative overflow-hidden rounded-xl aspect-[16/9] mb-4">
-<img alt="Classroom Music Education" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 border border-outline-variant" src="https://lh3.googleusercontent.com/aida/AP1WRLsokvm-lQnzKkQlyoUpJWHWeHaNQnVGdPnQy14GvWfj8JbVdgMSYzDV5Xh6gXfxDrQKo-gmBWpkZnqnVa56xDKdDv9SDDzacQf-JbhlJOitYU3iwdk6QeB6PAK5_Upd7g7LXvBT8-NzcoPJBZwRrbQlnKwCowq1BNb9bx4skjy4TuyIZYICIPmqHZPTwzWB73uhiIaYIkWiT_kSTpttIyCS0h5-47JZB66Qd0PpM9yTMSYluCbtdQSUz10"/>
-<div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-<span class="material-symbols-outlined text-white text-6xl fill">play_circle</span>
+<div class="bg-surface-container-lowest rounded-2xl shadow-level-1 overflow-hidden border border-outline-variant hover:shadow-level-2 transition-all group">
+<div class="h-48 w-full bg-surface-container-low relative overflow-hidden">
+<img alt="아일랜드 전통 음악" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAVuQvVK5D1xkkxbGB2QyynyoucJK8HYDwZaEero2Sr9KP-mNL39-hkx1n3UAuNB9rkishYIjzTa0qWXg33LYxZDYle5TmlgNgwzEscSjat2sPLKz660ebdfmoZecdyCXJ5xQEWBuD7wBpHMYSzGIzlpVB6E5wGTwzvA137eJYeVpIwkFRmfdPKxlhiUM9AkxIZZlk0JMKIMmsSI3CpU0EH4jCExkrkECkyWbIEp2eFlWsuNhjEXoR0oKoceXxOi8SmK9JMaC8nUM"/>
+<div class="absolute top-4 left-4 bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs font-bold">중급</div>
+</div>
+<div class="p-lg">
+<h3 class="text-xl font-bold mb-2">아일랜드 전통 음악</h3>
+<p class="text-sm text-secondary leading-relaxed mb-md">아일랜드 특유의 꾸밈음과 리듬을 익히는 심화 과정</p>
+<div class="flex justify-between items-center pt-md border-t border-outline-variant">
+<span class="text-primary font-bold text-lg">₩69,000</span>
+<button class="text-primary hover:text-green-600 text-sm font-semibold flex items-center gap-1">수강하기 <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
 </div>
 </div>
-<div class="flex items-center gap-2 mb-2">
-<span class="bg-blue-100 text-blue-600 text-xs font-bold px-2 py-1 rounded">중급</span>
-<span class="text-sm text-secondary">총 20강</span>
-</div>
-<h3 class="text-xl font-bold mb-1 group-hover:text-primary transition-colors">교실 음악 지도법</h3>
-<p class="text-secondary font-medium">강사: 이교육</p>
 </div>
 <!-- Course 3 -->
-<div class="group cursor-pointer">
-<div class="relative overflow-hidden rounded-xl aspect-[16/9] mb-4">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 border border-outline-variant" data-alt="A close-up shot of hands expertly playing a premium silver tin whistle against a dark, dramatic background with focused studio spotlighting. High-contrast modern aesthetic emphasizing technical skill." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_XUCvCM5Hq0qA6feWTERrHB_XyuVFNZ6qF1n2w81mSAMZ-VLr3zvOek7es8i3MuY5RhyAbG7EnyoIMfrqA_fxozQER8NlzuHto061DOsztwInLn-MJ4FlOktfZiaWyxWSslH7dZky8d34rygx_PgDNk1wbAITXR3r3ynd0VtAsXu-XP-LEvk2eUeaVdzJ4bKwBFFEeSdwEmYIiEV05nmiSVc1b7fueHujQyCDJmdPf8hXCYDBdWRWT12fnqJzhvrLupgh3kMSsS0"/>
-<div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-<span class="material-symbols-outlined text-white text-6xl fill">play_circle</span>
+<div class="bg-surface-container-lowest rounded-2xl shadow-level-1 overflow-hidden border border-outline-variant hover:shadow-level-2 transition-all group">
+<div class="h-48 w-full bg-surface-container-low relative overflow-hidden">
+<img alt="방과후 강사 자격증" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmqx-zM8czs0awY5oe0-IamGT_B14rJCHkm0xCXuWO1gf2s7EyTXneGmxlPq8YwcEon28bFz5GKiv0hr4Rr0_yzQZ1-sxEJXh728esCxEzviZ44ocCsejrSRQwjRM3_bSrXGHG8zaNxiMJjx-PQBeMytL5Qr5FJKZAzYR4mceZbamLYPGG-biXOW0NMrqLFXWB-Tr7BhiPKJ8dAzT1O95LmqY_wi4Eeu3ub93_u0h3JQ7DDLWTKmCF8kY5U3FPfoTf1wRWbA"/>
+<div class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 rounded-full text-xs font-bold">강사양성</div>
+</div>
+<div class="p-lg">
+<h3 class="text-xl font-bold mb-2">방과후 강사 자격증</h3>
+<p class="text-sm text-secondary leading-relaxed mb-md">실제 교실에서 활용 가능한 교수법과 커리큘럼 제공</p>
+<div class="flex justify-between items-center pt-md border-t border-outline-variant">
+<span class="text-primary font-bold text-lg">₩120,000</span>
+<button class="text-primary hover:text-green-600 text-sm font-semibold flex items-center gap-1">알아보기 <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
 </div>
 </div>
-<div class="flex items-center gap-2 mb-2">
-<span class="bg-purple-100 text-purple-600 text-xs font-bold px-2 py-1 rounded">고급</span>
-<span class="text-sm text-secondary">총 15강</span>
-</div>
-<h3 class="text-xl font-bold mb-1 group-hover:text-primary transition-colors">고급 연주 테크닉</h3>
-<p class="text-secondary font-medium">강사: 박마스터</p>
 </div>
 </div>
 </section>
-<!-- Footer -->
+
+<!-- 최신 소식 (v4 UI + v3 colors) -->
+<section class="py-2xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full mb-2xl">
+<div class="bg-surface-container-low rounded-3xl px-xl py-2xl">
+<div class="flex justify-between items-end mb-8">
+<h2 class="text-3xl font-bold text-on-surface">최신 소식</h2>
+<a class="text-primary text-sm font-semibold hover:underline" href="#">모두 보기</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+<!-- Blog 1 -->
+<a class="group flex flex-col gap-3" href="#">
+<div class="h-40 w-full rounded-xl overflow-hidden relative shadow-sm">
+<img alt="방과후 프로그램" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClesEXo9ddJWZr3VoqlFsXgmr-9nEsaCcIJdq5ZWccIrXS7f1IujnVszJ0kTCQgLzEb3JTCfMs0uN8Dpm4P5udEj_Vru3pMS62n9JmUUObb2wTW1C3rLRgVzqRAv8YtHyWXMhJxKHvbAyx2FRPjXEke44nuH96G_R5BVffCBNCoSKs17Kl0hmODVd_FOCzvv3CPWm9tI-JSb-bQiTfAIVnaQCzxGiTlM-KG2lw_YJNnpwkiH1HgSVVTYhbATGqXff8DunN9my9blE"/>
+</div>
+<div>
+<p class="text-xs font-medium text-gray-400 mb-1">2025. 05. 12</p>
+<h4 class="text-base font-bold text-on-surface group-hover:text-primary transition-colors line-clamp-2">2025년 2학기 방과후 학교 프로그램 제안서 양식 배포</h4>
+</div>
+</a>
+<!-- Blog 2 -->
+<a class="group flex flex-col gap-3" href="#">
+<div class="h-40 w-full rounded-xl overflow-hidden relative shadow-sm">
+<img alt="늘봄교실 수업" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt31vhzIQCLfy0O-PaP6K6UlQ2Wy20uxwP1ZelqrotSdoZUUTIP3nWy1G1FxpYiXJr_WpsxRnolvOSE8foINn_HPGxbOnhomH25OlkQedZA1Su0p7e1R8K-W4xBsz5_n-DNz0GAnWNJW-xII49Ked2Lllhv0o-_I9ZT3onQrj0tSoaP_t21kF6P4Ty5CaKRxUwenZ9kCDltMPa4dR-zKPQi-HF0FF9K430BZVHfBIEavKcbceUizwrfDMxVQ_eIoCBevUV3FmrIO4"/>
+</div>
+<div>
+<p class="text-xs font-medium text-gray-400 mb-1">2025. 04. 28</p>
+<h4 class="text-base font-bold text-on-surface group-hover:text-primary transition-colors line-clamp-2">늘봄교실 틴휘슬 수업 현장 스케치</h4>
+</div>
+</a>
+<!-- Blog 3 -->
+<a class="group flex flex-col gap-3" href="#">
+<div class="h-40 w-full rounded-xl overflow-hidden relative shadow-sm">
+<img alt="강사 가이드" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBua0CTmXmEcagceJ7nvTQUbcZl9EQC7EUGr3pWObHf9TVaILOt94x7nQGYA5XbPjlcQ6sI6Zpr3ug2TQrUfpvzQMZ-9v7_Pc_XEV9wjlaNq-m4"/>
+</div>
+<div>
+<p class="text-xs font-medium text-gray-400 mb-1">2025. 04. 15</p>
+<h4 class="text-base font-bold text-on-surface group-hover:text-primary transition-colors line-clamp-2">초보 강사를 위한 학부모 상담 가이드 (PDF 다운로드)</h4>
+</div>
+</a>
+</div>
+</div>
+</section>
+
+<!-- Footer (v3, 한글화 + 2026) -->
 <footer class="bg-surface-container-low border-t border-outline-variant">
 <div class="w-full px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
 <div class="text-2xl font-bold text-on-surface">ONUM</div>
 <div class="flex flex-wrap justify-center gap-6">
-<a class="text-secondary hover:text-primary transition-colors text-sm font-medium" href="#">Terms</a>
-<a class="text-secondary hover:text-primary transition-colors text-sm font-medium" href="#">Privacy</a>
-<a class="text-secondary hover:text-primary transition-colors text-sm font-medium" href="#">Contact</a>
-<a class="text-secondary hover:text-primary transition-colors text-sm font-medium" href="#">Instructor Portal</a>
+<a class="text-secondary hover:text-primary transition-colors text-sm font-medium" href="#">이용약관</a>
+<a class="text-secondary hover:text-primary transition-colors text-sm font-medium" href="#">개인정보처리방침</a>
+<a class="text-secondary hover:text-primary transition-colors text-sm font-medium" href="#">문의하기</a>
+<a class="text-secondary hover:text-primary transition-colors text-sm font-medium" href="#">강사 포털</a>
 </div>
 <div class="text-sm text-secondary">
-                © 2024 ONUM. All rights reserved.
-            </div>
+    © 2026 ONUM. All rights reserved.
+</div>
 </div>
 </footer>
 </body></html>
