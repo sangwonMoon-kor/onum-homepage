@@ -1,0 +1,88 @@
+/*
+ * 온음(ONUM) — 디자인 토큰(CSS 변수) + 공통 유틸. 단일 소스.
+ * 명세: onum-design.md  ·  Tailwind 매핑: onum-tokens.js
+ * 색은 "R G B" 트리플로 둬서 rgb(var(--x) / <alpha>) 알파 조절을 가능하게 함.
+ */
+
+:root {
+  --color-primary: 0 70 57;
+  --color-primary-container: 27 94 79;
+  --color-on-primary: 255 255 255;
+  --color-on-primary-container: 149 213 194;
+  --color-secondary: 125 86 45;
+  --color-secondary-container: 255 202 152;
+  --color-on-secondary: 255 255 255;
+  --color-on-secondary-container: 122 83 42;
+  --color-tertiary: 97 46 35;
+  --color-background: 251 249 243;
+  --color-surface: 251 249 243;
+  --color-surface-container-lowest: 255 255 255;
+  --color-surface-container-low: 245 243 238;
+  --color-surface-container: 240 238 232;
+  --color-surface-container-high: 234 232 226;
+  --color-surface-container-highest: 228 226 221;
+  --color-on-surface: 27 28 25;
+  --color-on-surface-variant: 63 73 69;
+  --color-outline: 112 121 117;
+  --color-outline-variant: 191 201 196;
+  --color-error: 186 26 26;
+  --color-error-container: 255 218 214;
+  --color-on-error: 255 255 255;
+}
+
+.dark {
+  --color-primary: 147 211 192;
+  --color-primary-container: 5 81 66;
+  --color-on-primary: 0 56 44;
+  --color-on-primary-container: 175 240 220;
+  --color-secondary: 240 189 139;
+  --color-secondary-container: 98 63 24;
+  --color-on-secondary: 70 41 10;
+  --color-on-secondary-container: 255 220 189;
+  --color-tertiary: 255 180 165;
+  --color-background: 18 19 15;
+  --color-surface: 18 19 15;
+  --color-surface-container-lowest: 11 12 9;
+  --color-surface-container-low: 26 28 23;
+  --color-surface-container: 31 32 27;
+  --color-surface-container-high: 42 43 37;
+  --color-surface-container-highest: 53 54 48;
+  --color-on-surface: 228 226 221;
+  --color-on-surface-variant: 195 203 197;
+  --color-outline: 140 149 143;
+  --color-outline-variant: 66 74 69;
+  --color-error: 255 180 171;
+  --color-error-container: 147 0 10;
+  --color-on-error: 105 0 5;
+}
+
+body {
+  background-color: rgb(var(--color-background));
+  color: rgb(var(--color-on-surface));
+}
+
+.glass-nav {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgb(var(--color-surface) / 0.8);
+}
+
+.soft-shadow {
+  box-shadow: 0 8px 30px rgb(var(--color-primary) / 0.08);
+}
+
+.soft-shadow-lg {
+  box-shadow: 0 16px 48px rgb(var(--color-primary) / 0.12);
+}
+
+/* 그라데이션 텍스트 — 라이트는 딥그린 계열, 다크는 밝은 민트 계열로 자동 전환 */
+.text-gradient {
+  background-image: linear-gradient(90deg, rgb(var(--color-primary-container)), rgb(var(--color-primary)));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.dark .text-gradient {
+  background-image: linear-gradient(90deg, rgb(var(--color-primary)), rgb(var(--color-on-primary-container)));
+}

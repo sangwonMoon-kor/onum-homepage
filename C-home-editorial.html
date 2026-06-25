@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>온음(ONUM) — 틴휘슬 음악지도사 자격증</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="onum-tokens.js"></script>
+<link rel="stylesheet" href="onum-base.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+</style>
+</head>
+<body class="bg-background text-on-surface font-body text-body-md antialiased selection:bg-primary-container selection:text-on-primary">
+<!-- 1. TopNavBar (공유 glass-nav, 자동 라이트/다크) -->
+<nav class="glass-nav border-b border-outline-variant/30 sticky top-0 w-full z-50">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop h-20">
+<a class="flex items-center gap-2 font-heading text-headline-sm tracking-tight text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">music_note</span>
+<span>ONUM (온음)</span>
+</a>
+<ul class="hidden md:flex items-center gap-2">
+<li><a class="text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-body text-body-md rounded-full px-4 py-2" href="#">Certification</a></li>
+<li><a class="text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-body text-body-md rounded-full px-4 py-2" href="#curriculum">Curriculum</a></li>
+<li><a class="text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-body text-body-md rounded-full px-4 py-2" href="#">Materials</a></li>
+<li><a class="text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-body text-body-md rounded-full px-4 py-2" href="#">Philosophy</a></li>
+</ul>
+<div class="hidden md:block">
+<a class="bg-primary text-on-primary font-body text-body-md px-6 py-3 rounded-full hover:bg-primary-container transition-colors soft-shadow inline-block active:scale-95" href="#">Get Certified</a>
+</div>
+<button class="md:hidden text-primary p-2 hover:bg-primary/5 rounded-full transition-colors" aria-label="메뉴 열기">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- 2. Editorial Hero -->
+<header class="relative w-full min-h-[85vh] flex items-center justify-center overflow-hidden bg-surface-container-low">
+<div class="absolute inset-0 z-0">
+<!-- placeholder: 실제 온음 클래스룸 사진으로 교체 -->
+<img alt="틴휘슬을 연주하며 아이들을 가르치는 강사" class="w-full h-full object-cover object-center opacity-80 mix-blend-multiply" src="https://lh3.googleusercontent.com/aida/AP1WRLsHnvypSw6eP4wwGjIrn5A6JrDm4m13fKB_5zf-FQNG00N40Aw8CfnjAgXhXj0zpk1VCl7gGeNjR8n-lqILBAs5wrn6FpTNiHxXqMibBZ8BCeALQrWodZ9Pmg7D35znhHZ89jyOyKbxiKF4g1nkpm5DTvoJLoHc2YO2Nam_QX0KZLjs1ugpzH7rmMQPnT0ri-ga4FgWzrumqy4_b-cUC-45go4YdDqsb-61gkXXFnTtQADrYvpfVWN_bZk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+</div>
+<div class="relative z-10 text-center px-margin-mobile md:px-gutter max-w-[800px] mt-20">
+<h1 class="font-heading text-display-sm md:text-display-lg text-primary mb-6 drop-shadow-sm">
+                아이가 처음 멜로디를 불어내는 순간,<br/>당신이 만듭니다
+            </h1>
+<p class="font-body text-body-lg text-on-surface-variant mb-10 max-w-[600px] mx-auto">
+                연주를 넘어 가르치는 사람으로. 전문적인 틴휘슬 교육가로 거듭나는 가장 우아하고 확실한 여정을 시작하세요.
+            </p>
+<a class="inline-flex items-center justify-center bg-primary text-on-primary px-8 py-4 rounded-full font-body text-body-lg soft-shadow hover:bg-primary-container hover:-translate-y-1 transition-all duration-300 group" href="#curriculum">
+                자격증 과정 보기
+                <span class="material-symbols-outlined ml-2 text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</header>
+<!-- 3. Pull-Quote Band (브랜드 선언 — 가짜 출처 없음) -->
+<section class="py-section-gap px-margin-mobile md:px-gutter max-w-container-max mx-auto text-center">
+<span class="material-symbols-outlined text-secondary text-[48px] opacity-40 mb-6">format_quote</span>
+<blockquote class="font-heading text-headline-md text-primary max-w-[800px] mx-auto leading-relaxed">
+            "음악을 가르친다는 것은 단순히 기술을 전하는 것이 아니라, 누군가의 삶에 새로운 호흡을 불어넣는 일입니다."
+        </blockquote>
+</section>
+<!-- 4. 3-Part Narrative ("온음이 가르치는 것") -->
+<section class="py-section-gap bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="text-center mb-16">
+<h2 class="font-heading text-headline-md text-primary mb-4">온음이 가르치는 것</h2>
+<div class="w-12 h-1 bg-secondary mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-gutter">
+<div class="bg-surface rounded-xl p-8 soft-shadow flex flex-col items-center text-center transition-transform hover:-translate-y-2 duration-300">
+<div class="w-20 h-20 bg-surface-container rounded-full flex items-center justify-center mb-6 text-secondary">
+<span class="material-symbols-outlined text-[36px]" style="font-variation-settings:'FILL' 1;">music_note</span>
+</div>
+<h3 class="font-heading text-headline-sm text-primary mb-4">본질에 집중하는 연주 기법</h3>
+<p class="font-body text-body-md text-on-surface-variant">화려한 기교 이전에, 맑고 단단한 소리를 내는 호흡법과 운지법의 기본기를 완벽하게 다집니다.</p>
+</div>
+<div class="bg-surface rounded-xl p-8 soft-shadow flex flex-col items-center text-center transition-transform hover:-translate-y-2 duration-300 md:mt-12">
+<div class="w-20 h-20 bg-surface-container rounded-full flex items-center justify-center mb-6 text-secondary">
+<span class="material-symbols-outlined text-[36px]" style="font-variation-settings:'FILL' 1;">psychology</span>
+</div>
+<h3 class="font-heading text-headline-sm text-primary mb-4">아이들의 마음을 여는 교육학</h3>
+<p class="font-body text-body-md text-on-surface-variant">처음 악기를 접하는 아이들이 두려움 없이 음악을 즐길 수 있도록 돕는 실전 교수법을 배웁니다.</p>
+</div>
+<div class="bg-surface rounded-xl p-8 soft-shadow flex flex-col items-center text-center transition-transform hover:-translate-y-2 duration-300">
+<div class="w-20 h-20 bg-surface-container rounded-full flex items-center justify-center mb-6 text-secondary">
+<span class="material-symbols-outlined text-[36px]" style="font-variation-settings:'FILL' 1;">menu_book</span>
+</div>
+<h3 class="font-heading text-headline-sm text-primary mb-4">현장에서 바로 쓰이는 실전 교안</h3>
+<p class="font-body text-body-md text-on-surface-variant">수업 준비 시간을 줄여주는 연령별·수준별 맞춤형 커리큘럼 자료를 제공합니다.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Curriculum Timeline -->
+<section class="py-section-gap px-margin-mobile md:px-gutter max-w-[800px] mx-auto" id="curriculum">
+<div class="text-center mb-16">
+<h2 class="font-heading text-headline-md text-primary mb-4">자격증 취득 여정</h2>
+<p class="font-body text-body-md text-on-surface-variant">4주간의 깊이 있는 몰입으로 완성되는 전문가의 길</p>
+</div>
+<div class="relative border-l-2 border-surface-container-highest ml-4 md:ml-8 space-y-12 pb-8">
+<div class="relative pl-8 md:pl-12">
+<div class="absolute w-4 h-4 bg-secondary rounded-full -left-[9px] top-1 ring-4 ring-background"></div>
+<div class="font-body text-label-sm text-secondary mb-2 uppercase tracking-wider">Week 1</div>
+<h3 class="font-heading text-headline-sm text-primary mb-3">소리의 발견과 기초 호흡</h3>
+<p class="font-body text-body-md text-on-surface-variant">틴휘슬의 구조를 이해하고, 올바른 자세와 호흡을 통해 안정적인 소리를 내는 훈련을 집중적으로 진행합니다.</p>
+</div>
+<div class="relative pl-8 md:pl-12">
+<div class="absolute w-4 h-4 bg-secondary rounded-full -left-[9px] top-1 ring-4 ring-background"></div>
+<div class="font-body text-label-sm text-secondary mb-2 uppercase tracking-wider">Week 2</div>
+<h3 class="font-heading text-headline-sm text-primary mb-3">음계와 운지법 마스터</h3>
+<p class="font-body text-body-md text-on-surface-variant">기본 음계부터 반음계까지 정확한 운지법을 익히고, 동요와 간단한 민요를 연주하며 실전 감각을 키웁니다.</p>
+</div>
+<div class="relative pl-8 md:pl-12">
+<div class="absolute w-4 h-4 bg-secondary rounded-full -left-[9px] top-1 ring-4 ring-background"></div>
+<div class="font-body text-label-sm text-secondary mb-2 uppercase tracking-wider">Week 3</div>
+<h3 class="font-heading text-headline-sm text-primary mb-3">아이들을 위한 교수법</h3>
+<p class="font-body text-body-md text-on-surface-variant">연령별 인지 발달에 맞춘 지도 방식과 흥미를 유발하는 수업 디자인 노하우를 전수받습니다.</p>
+</div>
+<div class="relative pl-8 md:pl-12">
+<div class="absolute w-4 h-4 bg-secondary rounded-full -left-[9px] top-1 ring-4 ring-background"></div>
+<div class="font-body text-label-sm text-secondary mb-2 uppercase tracking-wider">Week 4</div>
+<h3 class="font-heading text-headline-sm text-primary mb-3">실전 모의 수업 및 검정</h3>
+<p class="font-body text-body-md text-on-surface-variant">실제 수업 환경을 가정한 모의 시연을 진행하며, 최종 평가를 통해 음악지도사로서의 자질을 검증받습니다.</p>
+</div>
+</div>
+</section>
+<!-- 6. Honest Trust Row -->
+<section class="py-section-gap bg-surface-container-high overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+<!-- placeholder: 실제 수업/교보재 사진으로 교체 (가짜 '협회' 인증 이미지 제거함) -->
+<div class="w-full lg:w-1/2 relative rounded-2xl overflow-hidden soft-shadow bg-surface-container-highest aspect-[4/3] flex flex-col items-center justify-center text-center text-on-surface-variant p-8">
+<span class="material-symbols-outlined text-[40px] mb-3 text-outline">add_a_photo</span>
+<p class="font-body text-body-md">실제 수업·교보재 사진 자리</p>
+<p class="font-body text-label-sm mt-1 text-outline">온음 실사진으로 교체하세요</p>
+</div>
+<div class="w-full lg:w-1/2 flex flex-col justify-center">
+<h2 class="font-heading text-headline-md text-primary mb-8">당신의 성장을 돕는<br/>온음만의 특별한 지원</h2>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1" style="font-variation-settings:'FILL' 1;">check_circle</span>
+<div>
+<h4 class="font-heading text-headline-sm text-primary mb-1">늘봄·방과후 정책 연계</h4>
+<p class="font-body text-body-md text-on-surface-variant">공교육 현장 진입을 돕는 맞춤형 정보와 컨설팅을 지원합니다.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1" style="font-variation-settings:'FILL' 1;">check_circle</span>
+<div>
+<h4 class="font-heading text-headline-sm text-primary mb-1">악기·교재·지도안·평가자료 풀세트</h4>
+<p class="font-body text-body-md text-on-surface-variant">수업 준비에 필요한 모든 실전 자료를 아낌없이 제공합니다.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1" style="font-variation-settings:'FILL' 1;">check_circle</span>
+<div>
+<h4 class="font-heading text-headline-sm text-primary mb-1">기수제 코호트 운영</h4>
+<p class="font-body text-body-md text-on-surface-variant">동기들과 네트워킹하며 지속적으로 교류하고 성장하는 커뮤니티를 형성합니다.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. Soft CTA Band (브랜드 그린 — 라이트/다크 모두 안전) -->
+<section class="py-24 bg-primary text-center px-margin-mobile">
+<h2 class="font-heading text-display-sm md:text-display-lg text-on-primary mb-8">
+            다음 기수와 함께 시작하세요
+        </h2>
+<p class="font-body text-body-lg text-on-primary/80 max-w-[600px] mx-auto mb-10">
+            음악을 통한 선한 영향력, 온음과 함께라면 당신도 할 수 있습니다. 지금 바로 자격증 과정에 합류하세요.
+        </p>
+<a class="inline-flex items-center justify-center bg-secondary-container text-on-secondary-container px-10 py-4 rounded-full font-body text-body-lg soft-shadow hover:opacity-90 hover:-translate-y-1 transition-all duration-300" href="#">
+            자격증 과정 신청하기
+        </a>
+</section>
+<!-- 8. Footer (영구 딥그린 — 고정 색으로 양 테마 안전) -->
+<footer class="bg-[#10241d] text-white font-body text-body-md w-full pt-section-gap pb-20">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col gap-4 mb-8 lg:mb-0">
+<span class="font-heading text-headline-md text-[#ffca98] mb-2">ONUM</span>
+<p class="text-white/70 text-sm max-w-xs">음악을 가르치는 다음 세대를 응원합니다. 연주를 넘어 가르치는 사람으로, 온음.</p>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-bold text-[#ffca98] mb-2 tracking-wide uppercase text-sm">약관 · 지원</h4>
+<a class="text-white/70 hover:text-white transition-colors w-fit" href="#">이용약관</a>
+<a class="text-white/70 hover:text-white transition-colors w-fit" href="#">개인정보처리방침</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-bold text-[#ffca98] mb-2 tracking-wide uppercase text-sm">커뮤니티</h4>
+<a class="text-white/70 hover:text-white transition-colors w-fit" href="#">강사 디렉터리</a>
+<a class="text-white/70 hover:text-white transition-colors w-fit" href="#">문의하기</a>
+</div>
+<div class="flex flex-col gap-4 justify-end lg:items-end mt-8 lg:mt-0 lg:col-start-4">
+<p class="text-white/50 text-sm mt-auto">© 2026 온음(ONUM). All rights reserved.</p>
+</div>
+</div>
+</footer>
+</body></html>

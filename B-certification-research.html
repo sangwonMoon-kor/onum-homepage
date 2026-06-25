@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ONUM - 틴휘슬 음악지도사 자격증</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="onum-tokens.js"></script>
+<link rel="stylesheet" href="onum-base.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+  .accordion-content { transition: max-height .3s ease-out, opacity .3s ease-out; max-height: 0; opacity: 0; overflow: hidden; }
+  .accordion-active .accordion-content { max-height: 600px; opacity: 1; }
+  .accordion-toggle-icon { transition: transform .3s ease; }
+  .accordion-active .accordion-toggle-icon { transform: rotate(180deg); }
+</style>
+</head>
+<body class="font-body antialiased min-h-screen flex flex-col bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary">
+<!-- TopNavBar -->
+<header class="w-full top-0 sticky z-50 glass-nav border-b border-outline-variant/30">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">music_note</span>
+<span class="font-heading text-headline-md text-primary tracking-tight">ONUM</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body text-body-md transition-all" href="#certification">Certification</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body text-body-md" href="#curriculum">Curriculum</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body text-body-md" href="#pricing">Pricing</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body text-body-md" href="#faq">FAQ</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden md:flex items-center justify-center px-6 py-2.5 bg-primary text-on-primary rounded-full font-body text-label-sm hover:bg-primary-container transition-colors whitespace-nowrap">
+                    Get Certified
+                </button>
+<button class="md:hidden text-primary hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative pt-section-gap pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center flex flex-col items-center justify-center min-h-[70vh]">
+<div class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-surface-container-high/50 via-surface to-surface pointer-events-none"></div>
+<span class="inline-block py-1 px-3 rounded-full bg-surface-container-high border border-outline-variant/40 text-primary font-body text-label-sm mb-6 tracking-widest uppercase">Instructor Program</span>
+<h1 class="font-display text-display-sm md:text-display-lg text-on-surface mb-4 max-w-4xl mx-auto leading-tight">
+                연주를 넘어,<br/>
+                가르치는 사람으로
+            </h1>
+<h2 class="font-heading text-headline-md md:text-headline-lg text-gradient mb-8">
+                틴휘슬 음악지도사 자격증
+            </h2>
+<p class="font-body text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto leading-relaxed">
+                늘봄·방과후 음악수업을 직접 열 수 있는 역량과<br class="hidden md:block"/>
+                현장 맞춤형 수업자료를 한 번에 완성하는 4주 과정
+            </p>
+<div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+<button class="w-full sm:w-auto px-8 py-4 bg-primary text-on-primary rounded-full font-body text-body-md font-medium hover:bg-primary-container transition-colors soft-shadow flex items-center justify-center gap-2 group">
+                    다음 기수 신청하기
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="w-full sm:w-auto px-8 py-4 border border-outline text-on-surface rounded-full font-body text-body-md font-medium hover:bg-surface-container-high transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">download</span>
+                    브로셔 다운로드
+                </button>
+</div>
+<!-- 신뢰요소 (가짜 파트너 로고 대체) -->
+<div class="mt-16 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 font-body text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span> 늘봄·방과후 정책 연계 커리큘럼</span>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span> 악기·교재·지도안·평가자료 풀세트</span>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span> 기수제 코호트 운영</span>
+</div>
+</section>
+<!-- Features (3-column) -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-low border-y border-outline-variant/20" id="certification">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h3 class="font-heading text-headline-md text-on-surface mb-4">왜 ONUM 자격증인가요?</h3>
+<p class="font-body text-body-md text-on-surface-variant">현장 강사들의 피드백을 바탕으로 설계된 실무 중심 커리큘럼</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Feature 1 -->
+<div class="bg-surface rounded-xl p-8 soft-shadow flex flex-col h-full border border-outline-variant/10 hover:-translate-y-1 transition-transform duration-300">
+<div class="w-14 h-14 rounded-full bg-primary-container/10 flex items-center justify-center mb-6 text-primary">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">school</span>
+</div>
+<h4 class="font-heading text-headline-sm text-on-surface mb-3">가르치는 법까지</h4>
+<p class="font-body text-body-md text-on-surface-variant mb-6 flex-grow">
+                            단순한 악기 연주를 넘어, 아이들의 눈높이에 맞춘 구조화된 지도법과 클래스 운영 전략을 배웁니다.
+                        </p>
+<ul class="space-y-2 font-body text-label-sm text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span> 악기론 및 발성 구조</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span> 연령별 티칭 전략</li>
+</ul>
+</div>
+<!-- Feature 2 -->
+<div class="bg-surface rounded-xl p-8 soft-shadow flex flex-col h-full border border-outline-variant/10 hover:-translate-y-1 transition-transform duration-300">
+<div class="w-14 h-14 rounded-full bg-secondary-container/30 flex items-center justify-center mb-6 text-secondary">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">library_books</span>
+</div>
+<h4 class="font-heading text-headline-sm text-on-surface mb-3">수업자료 전면 제공</h4>
+<p class="font-body text-body-md text-on-surface-variant mb-6 flex-grow">
+                            내일 당장 수업에 들어갈 수 있도록, 현장에서 검증된 풀세트 교안과 악보를 제공합니다.
+                        </p>
+<ul class="space-y-2 font-body text-label-sm text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-base">check_circle</span> 12주차 표준 강의계획서</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-base">check_circle</span> 수준별 편곡 악보집</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-base">check_circle</span> 과정 중심 평가 양식</li>
+</ul>
+</div>
+<!-- Feature 3 -->
+<div class="bg-surface rounded-xl p-8 soft-shadow flex flex-col h-full border border-outline-variant/10 hover:-translate-y-1 transition-transform duration-300">
+<div class="w-14 h-14 rounded-full bg-tertiary/10 flex items-center justify-center mb-6 text-tertiary">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">groups</span>
+</div>
+<h4 class="font-heading text-headline-sm text-on-surface mb-3">기수제 밀착 운영</h4>
+<p class="font-body text-body-md text-on-surface-variant mb-6 flex-grow">
+                            4주간의 몰입형 코호트 학습으로, 동료 강사들과 네트워킹하며 실전 감각을 끌어올립니다.
+                        </p>
+<ul class="space-y-2 font-body text-label-sm text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-base">check_circle</span> 주차별 과제 및 피드백</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-base">check_circle</span> 수료생 커뮤니티 초대</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Context Image Section -->
+<section class="py-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="rounded-xl overflow-hidden soft-shadow-lg relative aspect-[21/9]">
+<img class="w-full h-full object-cover" data-alt="A warm, cinematic photo of a teacher guiding a small group of children playing tin whistles in a bright classroom, editorial style." src="https://lh3.googleusercontent.com/aida/AP1WRLsokvm-lQnzKkQlyoUpJWHWeHaNQnVGdPnQy14GvWfj8JbVdgMSYzDV5Xh6gXfxDrQKo-gmBWpkZnqnVa56xDKdDv9SDDzacQf-JbhlJOitYU3iwdk6QeB6PAK5_Upd7g7LXvBT8-NzcoPJBZwRrbQlnKwCowq1BNb9bx4skjy4TuyIZYICIPmqHZPTwzWB73uhiIaYIkWiT_kSTpttIyCS0h5-47JZB66Qd0PpM9yTMSYluCbtdQSUz10"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-8 md:p-12">
+<p class="font-heading text-white text-2xl md:text-4xl max-w-2xl leading-snug">
+                        "아이들이 음악을 즐거워하는 순간,<br/>강사로서의 진정한 보람이 시작됩니다."
+                    </p>
+</div>
+</div>
+</section>
+<!-- Curriculum (Accordion) -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="curriculum">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<div class="lg:col-span-4 mb-8 lg:mb-0">
+<h2 class="font-heading text-headline-md md:text-headline-lg text-on-surface mb-4">커리큘럼</h2>
+<p class="font-body text-body-md text-on-surface-variant mb-6">4주만에 완성하는 전문가 과정. 기초 탄탄 연주부터 실전 수업 설계까지 단계별로 마스터합니다.</p>
+<div class="inline-flex items-center gap-2 text-primary font-body text-label-sm bg-primary-container/10 px-4 py-2 rounded-full">
+<span class="material-symbols-outlined text-base">schedule</span> 총 4주 과정 / 16강
+                    </div>
+</div>
+<div class="lg:col-span-8 space-y-4">
+<!-- Week 1 -->
+<div class="border border-outline-variant/30 rounded-xl bg-surface overflow-hidden group accordion-item accordion-active">
+<button class="w-full flex items-center justify-between p-6 text-left hover:bg-surface-container-low transition-colors" onclick="this.parentElement.classList.toggle('accordion-active')">
+<div class="flex items-center gap-4">
+<span class="font-heading text-xl text-primary/40 group-hover:text-primary transition-colors">01</span>
+<h4 class="font-body text-body-lg font-semibold text-on-surface">기초와 발성 (Basics &amp; Sound)</h4>
+</div>
+<span class="material-symbols-outlined accordion-toggle-icon text-outline-variant">expand_more</span>
+</button>
+<div class="accordion-content bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="p-6 space-y-3">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-lg mt-0.5" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+<div>
+<p class="font-body text-body-md text-on-surface font-medium">틴휘슬의 이해와 구조</p>
+<p class="font-body text-label-sm text-on-surface-variant">악기의 역사와 종류, 관리법 (15분)</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-lg mt-0.5" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+<div>
+<p class="font-body text-body-md text-on-surface font-medium">바른 자세와 호흡법</p>
+<p class="font-body text-label-sm text-on-surface-variant">안정적인 소리를 내기 위한 기본기 (20분)</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-lg mt-0.5" style="font-variation-settings: 'FILL' 1;">assignment</span>
+<div>
+<p class="font-body text-body-md text-on-surface font-medium">주차 과제: 롱톤 연습 녹음 제출</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Week 2 -->
+<div class="border border-outline-variant/30 rounded-xl bg-surface overflow-hidden group accordion-item">
+<button class="w-full flex items-center justify-between p-6 text-left hover:bg-surface-container-low transition-colors" onclick="this.parentElement.classList.toggle('accordion-active')">
+<div class="flex items-center gap-4">
+<span class="font-heading text-xl text-primary/40 group-hover:text-primary transition-colors">02</span>
+<h4 class="font-body text-body-lg font-semibold text-on-surface">곡 연주와 운지법 (Songs &amp; Fingering)</h4>
+</div>
+<span class="material-symbols-outlined accordion-toggle-icon text-outline-variant">expand_more</span>
+</button>
+<div class="accordion-content bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="p-6 space-y-3">
+<p class="font-body text-body-md text-on-surface-variant">스케일 연습과 기초 레퍼토리 습득</p>
+</div>
+</div>
+</div>
+<!-- Week 3 -->
+<div class="border border-outline-variant/30 rounded-xl bg-surface overflow-hidden group accordion-item">
+<button class="w-full flex items-center justify-between p-6 text-left hover:bg-surface-container-low transition-colors" onclick="this.parentElement.classList.toggle('accordion-active')">
+<div class="flex items-center gap-4">
+<span class="font-heading text-xl text-primary/40 group-hover:text-primary transition-colors">03</span>
+<h4 class="font-body text-body-lg font-semibold text-on-surface">수업 설계 (Lesson Design)</h4>
+</div>
+<span class="material-symbols-outlined accordion-toggle-icon text-outline-variant">expand_more</span>
+</button>
+<div class="accordion-content bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="p-6 space-y-3">
+<p class="font-body text-body-md text-on-surface-variant">대상별 강의계획서 작성 및 모의 수업</p>
+</div>
+</div>
+</div>
+<!-- Week 4 -->
+<div class="border border-outline-variant/30 rounded-xl bg-surface overflow-hidden group accordion-item">
+<button class="w-full flex items-center justify-between p-6 text-left hover:bg-surface-container-low transition-colors" onclick="this.parentElement.classList.toggle('accordion-active')">
+<div class="flex items-center gap-4">
+<span class="font-heading text-xl text-primary/40 group-hover:text-primary transition-colors">04</span>
+<h4 class="font-body text-body-lg font-semibold text-on-surface">평가와 자료 (Evaluation &amp; Materials)</h4>
+</div>
+<span class="material-symbols-outlined accordion-toggle-icon text-outline-variant">expand_more</span>
+</button>
+<div class="accordion-content bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="p-6 space-y-3">
+<p class="font-body text-body-md text-on-surface-variant">과정 중심 평가 방법론 및 실전 자료 활용</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-high/30" id="pricing">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-heading text-headline-md md:text-headline-lg text-on-surface mb-4">수강 옵션</h2>
+<p class="font-body text-body-md text-on-surface-variant">나의 목표에 맞는 최적의 코스를 선택하세요</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter items-center">
+<!-- Tier 1 -->
+<div class="bg-surface rounded-xl p-8 border border-outline-variant/30 soft-shadow flex flex-col h-full opacity-90 hover:opacity-100 transition-opacity">
+<h3 class="font-body text-body-lg font-medium text-on-surface-variant mb-2">단과 강의</h3>
+<div class="flex items-baseline gap-1 mb-6">
+<span class="font-heading text-3xl font-bold text-on-surface">₩150,000</span>
+</div>
+<p class="font-body text-label-sm text-on-surface-variant mb-8 h-10">가볍게 연주법만 배우고 싶은 분들을 위한 VOD 코스</p>
+<ul class="space-y-4 font-body text-body-md text-on-surface-variant mb-8 flex-grow">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-outline-variant text-base">check</span> 1~2주차 연주법 강의 제공</li>
+<li class="flex items-center gap-3 text-outline-variant/50"><span class="material-symbols-outlined text-base">close</span> 자격증 발급 불가</li>
+<li class="flex items-center gap-3 text-outline-variant/50"><span class="material-symbols-outlined text-base">close</span> 수업 자료 및 교안 미제공</li>
+</ul>
+<button class="w-full py-3 px-4 border border-outline text-on-surface rounded-full font-body text-label-sm hover:bg-surface-container-high transition-colors mt-auto">
+                            선택하기
+                        </button>
+</div>
+<!-- Tier 2 (Highlighted) -->
+<div class="bg-surface rounded-xl p-8 border-2 border-primary soft-shadow-lg flex flex-col h-full relative transform md:-translate-y-4 z-10">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-on-primary px-4 py-1 rounded-full font-body text-xs tracking-wider soft-shadow">
+                            BEST
+                        </div>
+<h3 class="font-body text-body-lg font-bold text-primary mb-2">자격증 과정</h3>
+<div class="flex items-baseline gap-1 mb-6">
+<span class="font-heading text-4xl font-bold text-on-surface">₩390,000</span>
+</div>
+<p class="font-body text-label-sm text-on-surface-variant mb-8 h-10">방과후 강사 활동을 준비하는 예비 지도사를 위한 정규 코스</p>
+<ul class="space-y-4 font-body text-body-md text-on-surface mb-8 flex-grow">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">check_circle</span> 전 주차(1~4주) 밀착 강의</li>
+<li class="flex items-center gap-3 font-medium"><span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">check_circle</span> 틴휘슬 음악지도사 자격증 발급</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">check_circle</span> 12주 풀세트 수업 교안 제공</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">check_circle</span> 수준별 편곡 악보집 제공</li>
+</ul>
+<button class="w-full py-4 px-4 bg-primary text-on-primary rounded-full font-body text-label-sm font-bold hover:bg-primary-container transition-colors soft-shadow mt-auto">
+                            자격증 과정 신청
+                        </button>
+</div>
+<!-- Tier 3 -->
+<div class="bg-surface rounded-xl p-8 border border-outline-variant/30 soft-shadow flex flex-col h-full opacity-90 hover:opacity-100 transition-opacity">
+<h3 class="font-body text-body-lg font-medium text-on-surface-variant mb-2">올인원 패키지</h3>
+<div class="flex items-baseline gap-1 mb-6">
+<span class="font-heading text-3xl font-bold text-on-surface">₩550,000</span>
+</div>
+<p class="font-body text-label-sm text-on-surface-variant mb-8 h-10">자격증과 학급 수업용 악기 세트를 한 번에 구비하는 패키지</p>
+<ul class="space-y-4 font-body text-body-md text-on-surface-variant mb-8 flex-grow">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-outline-variant text-base">check</span> 자격증 과정 모든 혜택 포함</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-outline-variant text-base">check</span> 전문가용 교육 틴휘슬 1개</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-outline-variant text-base">check</span> 학생용 플라스틱 틴휘슬 20개 세트</li>
+</ul>
+<button class="w-full py-3 px-4 border border-outline text-on-surface rounded-full font-body text-label-sm hover:bg-surface-container-high transition-colors mt-auto">
+                            선택하기
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Band (브랜드 그린 — 라이트/다크 모두 안전) -->
+<section class="bg-primary py-section-gap px-margin-mobile md:px-margin-desktop text-center">
+<h2 class="font-heading text-headline-md text-on-primary mb-6">다음 기수 모집 중</h2>
+<p class="font-body text-body-md text-on-primary/80 mb-8 max-w-xl mx-auto">이번 기수 마감 전 등록하시고, 얼리버드 수강료 혜택과 추가 수업 자료집을 받아가세요.</p>
+<button class="px-8 py-4 bg-surface text-primary rounded-full font-body text-body-md font-bold hover:bg-surface-container transition-colors inline-flex items-center gap-2">
+                신청서 작성하기 <span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</section>
+</main>
+<!-- Footer (영구 다크 — 고정 라이트 텍스트로 양 테마 안전, 홈과 통일) -->
+<footer class="bg-[#1a1a1a] w-full border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-stack-xl max-w-container-max mx-auto gap-stack-lg md:gap-0">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">music_note</span>
+<span class="font-heading text-headline-md text-white tracking-tight">ONUM</span>
+</div>
+<p class="font-body text-white/60 text-center md:text-left text-sm">
+                © 2026 ONUM Music Education. All rights reserved.
+            </p>
+<nav class="flex flex-wrap justify-center gap-6">
+<a class="font-body text-white/70 hover:text-white transition-colors text-sm" href="#">Privacy Policy</a>
+<a class="font-body text-white/70 hover:text-white transition-colors text-sm" href="#">Terms of Service</a>
+<a class="font-body text-white/70 hover:text-white transition-colors text-sm" href="#">Contact Support</a>
+<a class="font-body text-white/70 hover:text-white transition-colors text-sm" href="#">Instructor Portal</a>
+</nav>
+</div>
+</footer>
+</body></html>
